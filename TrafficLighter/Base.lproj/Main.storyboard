@@ -16,27 +16,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3zQ-LF-Azc">
-                                <rect key="frame" x="132" y="104" width="129" height="128.33333333333334"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gtx-jK-uG7">
-                                <rect key="frame" x="132" y="288.33333333333337" width="129" height="127.66666666666663"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ciC-Oj-jDG">
+                                <rect key="frame" x="132.66666666666666" y="104" width="127.99999999999997" height="444"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3zQ-LF-Azc">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtx-jK-uG7">
+                                        <rect key="frame" x="0.0" y="158" width="128" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CY6-zF-lET">
+                                        <rect key="frame" x="0.0" y="316" width="128" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="444" id="a6X-Wd-tAH"/>
+                                    <constraint firstAttribute="width" constant="128" id="phf-sE-HG3"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8K-rj-Wd7">
+                                <rect key="frame" x="152" y="687.66666666666663" width="89" height="40.333333333333371"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CY6-zF-lET">
-                                <rect key="frame" x="132" y="472" width="129" height="128.33333333333337"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8K-rj-Wd7">
-                                <rect key="frame" x="159" y="690.33333333333337" width="75" height="34.333333333333371"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="START">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="stateChangerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a5u-bO-brE"/>
                                 </connections>
@@ -44,6 +52,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ciC-Oj-jDG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="5bK-rT-MOe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="A8K-rj-Wd7" secondAttribute="bottom" constant="90" id="JXs-pk-wvA"/>
+                            <constraint firstItem="A8K-rj-Wd7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RNM-xy-tBQ"/>
+                            <constraint firstItem="ciC-Oj-jDG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bVH-Vj-Fg9"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="ButtonLightChanger" destination="A8K-rj-Wd7" id="vZz-i3-W4y"/>
@@ -54,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="76" y="-2"/>
+            <point key="canvasLocation" x="75.572519083969468" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
